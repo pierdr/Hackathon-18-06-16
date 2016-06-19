@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="BFt.js" type="text/javascript"></script>
+    <script src="utils.js" type="text/javascript"></script>
+    <script>
+    var element=new BFtObject();
+    $(function(){
+    element.start("172.16.27.35");
+	$("#button").on("click",function(){		
+		element.doTxEmbedded("\"" + $("#msg").val() + "\\n\"");
+	});
+    });
+    </script>
+  </head>
+  <body>
+	<h1>Old connected printer</h1>
+	<textarea id='msg'>Type your text here</textarea>
+ 	<button id="button">Print!</button>
+  </body>
+</html>
